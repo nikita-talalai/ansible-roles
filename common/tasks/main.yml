@@ -3,13 +3,13 @@
 
 - name: set timezone to Europe/Moscow
   timezone:
-    name: Europe/Moscow
+    name: "{{ region }}/{{ city }}"
 
 - block:
     - name: create a file for swap
-      shell: fallocate -l {{ swap_size }} /swapfile
+      shell: fallocate -l {{ swap_size }} {{ swap_file }}
       args:
-        creates: /swapfile
+        creates: "{{ swap_file }}"
 
     - name: set the correct permissions
       file:
