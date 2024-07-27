@@ -1,5 +1,0 @@
----
-# tasks file for hostname
-- name: "change hostname"
-  hostname:
-    name: web01

@@ -35,3 +35,7 @@
         passno: 0
         dump: 0
         state: present
+
+- name: "change hostname"
+  hostname:
+    name: "{{ inventory_hostname }}"
