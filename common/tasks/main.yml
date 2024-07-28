@@ -35,7 +35,13 @@
         passno: 0
         dump: 0
         state: present
+  become: yes
 
 - name: "change hostname"
   hostname:
     name: "{{ inventory_hostname }}"
+
+- name: update apt cache
+  apt:
+    update_cache: yes
+  become: yes

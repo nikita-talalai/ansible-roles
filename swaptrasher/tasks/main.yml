@@ -16,3 +16,4 @@
         state: absent
 
   when: ansible_facts.swaptotal_mb > 0
+  become: yes
