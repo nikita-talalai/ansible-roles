@@ -25,5 +25,17 @@
       name: docker
       state: started
       enabled: yes
+
+  - name: create docker group
+    group:
+      name: docker
+      state: present
+
+  - name: add user to docker group
+    user:
+      name: user
+      append: true
+      groups: docker
+
   become: yes
 
