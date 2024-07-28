@@ -4,3 +4,14 @@ swap_size: 1G
 region: Europe
 city: Moscow
 swap_file: /swapfile
+packages:
+  - git
+  - net-tools
+  - zip
+  - unzip
+  - rsync
+  - strace
+  - atop
+  - lsof
+  - curl
+  - jq
